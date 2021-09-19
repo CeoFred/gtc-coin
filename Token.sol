@@ -14,7 +14,7 @@ contract GTCToken is ERC20 {
       uint totalCallTime;
   }
   
-    modifier isContract(address addr) {
+  modifier isContract(address addr) {
   uint size = 0;
   assembly { size := extcodesize(addr) }
   require(size == 0);
